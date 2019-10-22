@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROJECT:Note</title>
+</head>
+
+<body>
+    <div id="main_page_container">
+        <div id="side_bar_container">
+            <div id="image_cropper"><img src='https://github.com/momentum-cohort-2019-09/w4-note-taking-app-daniel-lisa/blob/master/assets/logo.png?raw=true'></div>
+        </div>
+        <div id="main_page_body">
+            <div class="main_note_body">
+                test
+                <ul id="notes">
+                    <li>
+                        <div> {{ notes.title }}</div>
+                        <ol>
+                            {% for in notes.items %}
+                            <li>
+                                {{item}}
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
