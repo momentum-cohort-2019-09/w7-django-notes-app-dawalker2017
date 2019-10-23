@@ -1,0 +1,28 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Project:Note{% endblock%}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ProjectNote.css' %}">
+</head>
+
+<body>
+    <div id="main_page_container">
+        <div id="side_bar_container">
+            <div id="side_bar_object"></div>
+            <div id="logo"><img src='static/assets/Logo.png'></div>
+        </div>
+        <div id="main_page_body">
+            MAIN_PAGE_BODY
+            <!-- <img src='static/assets/Logo-icon.png'> -->
+            <div class="note">{% block content %} {% endblock %}</div>
+        </div>
+    </div>
+</body>
+
+</html>

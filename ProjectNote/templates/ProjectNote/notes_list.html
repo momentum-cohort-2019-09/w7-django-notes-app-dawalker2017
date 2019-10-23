@@ -1,0 +1,9 @@
+{% extends "ProjectNote/base.html" %} {% block content %}
+<ul id="notes">
+    {% for note in notes %}
+    <li>
+        <div class="note_title"><a href="/notes/{{ note.id }}">{{ note.title }}</a></div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

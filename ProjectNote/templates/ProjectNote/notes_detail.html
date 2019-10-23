@@ -1,0 +1,20 @@
+{% extends "ProjectNote/base.html" %}
+
+<!--  -->
+{% block title %}Project:Note - {{ notes.title}}{% endblock %}
+
+<!--  -->
+{% block content %}
+
+<h3>{{ note.title }}</h3>
+
+{% if note.description %}
+
+<p>
+    {{ note.description }}
+</p>
+
+{% endif %}
+
+<!--  -->
+{% endblock %}
