@@ -13,13 +13,15 @@
 
 <body>
     <div id="main_page_container">
-        <div id="side_bar_container">
-            <div id="side_bar_object"></div>
-            <div id="logo"><img src='static/assets/Logo.png'></div>
+        <div id="sidebar_container">
+            <img id="logo" src='static/assets/Logo.png'>
+            <div id="sidebar_text">
+                <div class="text">Home</div>
+                <div class="text">Notes</div>
+            </div>
         </div>
         <div id="main_page_body">
             MAIN_PAGE_BODY
-            <!-- <img src='static/assets/Logo-icon.png'> -->
             <div class="note">{% block content %} {% endblock %}</div>
         </div>
     </div>
