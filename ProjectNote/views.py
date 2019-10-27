@@ -12,4 +12,8 @@ def notes_list(request):
 # pk = PrimaryKey
 def notes_detail(request, pk):
     note = Note.objects.get(pk=pk)
-    return render(request, "ProjectNote/notes_detail.html", {"note": note})
+    items = note.items.order_by('order')
+    return render(request, "ProjectNote/notes_detail.html", {
+        "note": note,
+        "items": items,
+        })
