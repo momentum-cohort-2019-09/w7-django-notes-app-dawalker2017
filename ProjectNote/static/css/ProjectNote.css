@@ -11,6 +11,11 @@
     outline: none;
 }
 
+
+/* * a {
+    text-decoration: none;
+} */
+
 html,
 body {
     height: 100%;
@@ -40,7 +45,7 @@ body {
     width: 18rem;
 }
 
-#sidebar_text {
+#sidebar_menu {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -49,16 +54,54 @@ body {
     margin-top: 1rem;
 }
 
-#sidebar_text .text {
+.sidebar_button_container {
+    /* background-color: purple; */
+}
+
+.sidebar_button {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align-last: center;
-    width: 25%;
-    background-color: #ffffff54;
-    border-right: 1.5px solid #4D97CC;
-    border-left: 1.5px solid #4D97CC;
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
+    background-color: whitesmoke;
+    border-top: none;
+    border-right: 3px solid #1d88d4;
+    border-left: 3px solid #1d88d4;
+    border-bottom: none;
+    width: 100%;
     margin-bottom: 0.5rem;
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.sidebar_button:hover {
+    color: black;
+    border-right: 3px solid #67bffd;
+    border-left: 3px solid #67bffd;
+}
+
+.sidebar_button:active {
+    box-shadow: inset 0px 0px 10px 1px #acacac;
+    background-color: #ffffff49;
+    border: none;
+    transform: scale(0.9);
+}
+
+.button_link {
+    text-decoration: none;
+    color: black;
+}
+
+.button_link .sidebar_button:hover {
+    color: #67bffd;
+}
+
+.button_link .sidebar_button:active {
+    text-decoration: none;
+    color: #0e5181;
+    border: none;
 }
 
 #main_page_container {
@@ -486,4 +529,66 @@ body {
     margin-right: 3rem;
     margin-bottom: 0.5rem;
     margin-left: 3rem;
+}
+
+
+/*=====================================| <notes_create.html> |===========================*/
+
+.create_header {
+    background-color: red;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.container_create_form {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.create_form {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.container_button_create_form {
+    background-color: yellow;
+    width: 6rem;
+    padding-top: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+}
+
+.button_create_form {
+    width: 5rem;
+    padding-top: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.2rem;
 }
