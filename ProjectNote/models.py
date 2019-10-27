@@ -23,6 +23,9 @@ class Note(models.Model):
 
 
 class NoteItem(models.Model):
+    class Meta:
+        ordering = ['order']
+
     body = models.CharField(
         max_length=255,
         help_text="Max Characters: 255",
