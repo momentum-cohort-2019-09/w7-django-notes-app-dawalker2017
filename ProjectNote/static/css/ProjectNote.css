@@ -446,25 +446,39 @@ body {
     justify-content: center;
 }
 
-#description_title {
+#note_title {
     background-color: green;
-    border-top: 3px solid #4D97CC;
+    /* border-top: 3px solid #4D97CC; */
     font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
     line-height: 2rem;
-    margin-top: 0rem;
     margin-right: 1rem;
-    margin-bottom: 0.5rem;
     margin-left: 1rem;
     padding: 0.5rem;
 }
 
-#description_list_container {
-    background-color: orange;
+#note_description_container {
+    background-color: lightslategray;
+    width: 90%;
+    align-self: center;
 }
 
-#description_list_item {
+#note_description {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#note_list_container {
+    background-color: orange;
+    align-self: center;
+    width: 80%;
+}
+
+#note_list_item {
     background-color: yellow;
     list-style-position: inside;
     font-size: 1rem;

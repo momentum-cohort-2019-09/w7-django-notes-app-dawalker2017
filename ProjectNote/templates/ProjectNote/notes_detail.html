@@ -6,37 +6,44 @@
 
 {% block content %}
     <div id="note_layout">
-        <div id="note_controls">
+        {% comment %} <div id="note_controls">
             <div class="divider_horizontal"></div>
             <div class="note_control_button">
-                <button type="button" class="button_bulleted_list" onclick="descriptionMakeBulletedList()" title="Make Text a Bulleted List"><img class="image_bulleted_list" src="{% static 'assets/icon-list-bullet-white.png' %}">NW</button>
+                <button type="button" class="button_bulleted_list" onclick="makeItemsBulletedList()" title="Make Text a Bulleted List"><img class="image_bulleted_list" src="{% static 'assets/icon-list-bullet-white.png' %}">NW</button>
             </div>
             <div class="note_control_button">
-                <button type="button" class="button_numbered_list" onclick="descriptionMakeNumberedList()" title="Make Text a Numbered List"><img class="image_numbered_list" src="{% static 'assets/icon-list-number-white.png' %}">NW</button>
+                <button type="button" class="button_numbered_list" onclick="makeItemsNumberedList()" title="Make Text a Numbered List"><img class="image_numbered_list" src="{% static 'assets/icon-list-number-white.png' %}">NW</button>
             </div>
             <div class="divider_horizontal"></div>
             <div class="note_control_button">
-                <button type="button" class="button_leftalign" onclick="leftAlignDescription()" title="Left Align Text"><img class="image_leftalign" src="{% static 'assets/icon-align-left-white.png' %}"></button>
+                <button type="button" class="button_leftalign" onclick="leftAlignItems()" title="Left Align Text"><img class="image_leftalign" src="{% static 'assets/icon-align-left-white.png' %}"></button>
             </div>
             <div class="note_control_button">
-                <button type="button" class="button_centeralign" onclick="centerAlignDescription()" title="Center Align Text"><img class="image_centeralign" src="{% static 'assets/icon-align-center-white.png' %}"></button>
+                <button type="button" class="button_centeralign" onclick="centerAlignItems()" title="Center Align Text"><img class="image_centeralign" src="{% static 'assets/icon-align-center-white.png' %}"></button>
             </div>
             <div class="note_control_button">
-                <button type="button" class="button_rightalign" onclick="rightAlignDescription()" title="Right Align Text"><img class="image_rightalign" src="{% static 'assets/icon-align-right-white.png' %}"></button>
+                <button type="button" class="button_rightalign" onclick="rightAlignItems()" title="Right Align Text"><img class="image_rightalign" src="{% static 'assets/icon-align-right-white.png' %}"></button>
             </div>
             <div class="divider_horizontal"></div>
 
-        </div>
-        <div id="description_title">
+        </div> {% endcomment %}
+        <div id="note_title">
             <h3>{{ note.title }}</h3>
         </div>
-        <div id="description_list_container">
-            <ul id="description_list">
-                {% if note.description %}
-                    <li id="description_list_item">
-                        {{ note.description }}
+        <div id="note_description_container">
+            {% if note.description %}
+                <p id="note_description">
+                    {{ note.description }}
+                </p>
+            {% endif %}
+        </div>
+        <div id="note_list_container">
+            <ul id="note_list">
+                {% for item in note.items.all %}
+                    <li id="note_list_item">
+                        {{ item.body }}
                     </li>
-                {% endif %}
+                {% endfor %}
             </ul>
         </div>
     </div>

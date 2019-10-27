@@ -9,6 +9,7 @@ autopep8 = "*"
 
 [packages]
 django = "*"
+django-admin-sortable = "*"
 
 [requires]
 python_version = "3.7"
