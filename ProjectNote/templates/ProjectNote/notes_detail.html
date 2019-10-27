@@ -38,13 +38,13 @@
             {% endif %}
         </div>
         <div id="note_list_container">
-            <ul id="note_list">
-                {% for item in note.items.all %}
+            <ol id="note_list">
+                {% for item in items.all %}
                     <li id="note_list_item">
                         {{ item.body }}
                     </li>
                 {% endfor %}
-            </ul>
+            </ol>
         </div>
     </div>
 {% endblock %}
