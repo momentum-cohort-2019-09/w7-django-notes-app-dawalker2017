@@ -17,9 +17,9 @@
     <div id="everything_container">
         <div id="sidebar_container">
             <img id="logo" src='{% static "assets/Logo.png" %}'>
-            <div id="sidebar_text">
-                <div class="text">Home</div>
-                <div class="text">Notes</div>
+            <div id="sidebar_menu">
+                <div class="sidebar_button_container"><a class="button_link" href="{% url 'notes_list' %}"><button class="sidebar_button">Home</button></a></div>
+                <div class="sidebar_button_container"><a class="button_link" href="{% url 'notes_create' %}"><button class="sidebar_button">Create</button></a></div>
             </div>
         </div>
         <div id="main_page_container">
