@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from ProjectNote.models import Note
+from ProjectNote.form import NoteForm
 
 
 def notes_list(request):
@@ -16,4 +17,9 @@ def notes_detail(request, pk):
     return render(request, "ProjectNote/notes_detail.html", {
         "note": note,
         "items": items,
-        })
+    })
+
+
+def notes_create(request):
+    form = NoteForm()
+    return render(request, "ProjectNote/notes_create.html", {"form": form})
