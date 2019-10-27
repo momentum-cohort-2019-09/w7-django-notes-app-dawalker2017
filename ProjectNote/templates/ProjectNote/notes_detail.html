@@ -27,15 +27,17 @@
             <div class="divider_horizontal"></div>
 
         </div>
-        <div class="title">
+        <div id="description_title">
             <h3>{{ note.title }}</h3>
         </div>
-        <div class="description">
-            {% if note.description %}
-                <p id="description_paragraph">
-                    {{ note.description }}
-                </p>
-            {% endif %}
+        <div id="description_list_container">
+            <ul id="description_list">
+                {% if note.description %}
+                    <li id="description_list_item">
+                        {{ note.description }}
+                    </li>
+                {% endif %}
+            </ul>
         </div>
     </div>
 {% endblock %}
