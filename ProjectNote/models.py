@@ -30,7 +30,7 @@ class NoteItem(models.Model):
     checklist = models.ForeignKey(
         to=Note, on_delete=models.CASCADE, related_name='items')
 
-    # order = models.PositiveIntegerField(default=0)
+    order = models.PositiveIntegerField(default=0)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

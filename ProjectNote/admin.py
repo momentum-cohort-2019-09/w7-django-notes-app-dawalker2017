@@ -2,7 +2,7 @@ from django.contrib import admin
 from ProjectNote.models import Note, NoteItem
 
 
-class NoteItemInline(admin.StackedInline):
+class NoteItemInline(admin.TabularInline):
     model = NoteItem
     extra = 0
 
