@@ -1,14 +1,19 @@
-{% extends "ProjectNote/base.html" %} {% block content %}
+{% extends "ProjectNote/base.html" %} 
+{% load staticfiles %}
+
+{% block content %}
 <ul id="notes">
     {% for note in notes %}
     <li style="list-style-type:none">
         <div class="note_wrapper">
             <div class="actual_note">
                 <div><a class="note_text" href="/notes/{{ note.id }}">{{ note.title }}</a></div>
-                <div class="buttons"><button id="button_edit">Edit</button> <button id="button_delete">Delete</button></div>
+                <div class="buttons"><button id="button_edit"><img class="note_icons" src="static/assets/icon-edit-white.png"></button> <button id="button_delete"><img class="note_icons" src="static/assets/icon-delete-white.png"></button></div>
             </div>
         </div>
     </li>
     {% endfor %}
 </ul>
 {% endblock %}
+
+

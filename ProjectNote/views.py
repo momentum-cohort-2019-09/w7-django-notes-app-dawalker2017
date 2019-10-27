@@ -9,6 +9,7 @@ def notes_list(request):
     })
 
 
-# def notes_detail(request, id):
-#     note = Note.objects.get(id=id)
-#     return render(request, "ProjectNote/notes_detail.html", {"note": note})
+# pk = PrimaryKey
+def notes_detail(request, pk):
+    note = Note.objects.get(pk=pk)
+    return render(request, "ProjectNote/notes_detail.html", {"note": note})

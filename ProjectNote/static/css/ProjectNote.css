@@ -11,25 +11,16 @@
     outline: none;
 }
 
-
-/*=====(<base.html>)======================| Total VeiwPort Height |==========*/
-
 html,
 body {
     height: 100%;
 }
 
-
-/*=====(<base.html>)======================| Container of Everything on the Page |==========*/
-
-#main_page_container {
+#everything_container {
     display: flex;
     flex-direction: row;
     height: 100%;
 }
-
-
-/*=====(<base.html>)======================| Container of the Left Side |==========*/
 
 #sidebar_container {
     display: flex;
@@ -45,15 +36,9 @@ body {
     height: 100%;
 }
 
-
-/*=====(<base.html>)======================| Image of the Left Side |==========*/
-
 #logo {
     width: 18rem;
 }
-
-
-/*=====(<base.html>)======================| Container around the Navigation of the Left Side |==========*/
 
 #sidebar_text {
     display: flex;
@@ -63,9 +48,6 @@ body {
     max-height: 100%;
     margin-top: 1rem;
 }
-
-
-/*=====(<base.html>)======================| Text of the Left Side |==========*/
 
 #sidebar_text .text {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -79,66 +61,113 @@ body {
     padding-bottom: 0.1rem;
 }
 
-
-/*=====(<base.html>)======================| Container of the Right Side |==========*/
-
-#main_page_body {
+#main_page_container {
+    /* background-color: purple; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 3rem;
-}
-
-
-/*=====(<base.html>)======================| Text of the Main Page Header |==========*/
-
-.main_page_text {
-    display: flex;
-    justify-content: space-between;
-    white-space: nowrap;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2rem;
-    border-bottom: 3px solid #76C2E0;
-    width: 80%;
-    padding-left: 3rem;
-    padding-right: 4rem;
-    padding-bottom: 0.3rem;
-}
-
-
-/*=====(<base.html>)======================| Button of the Main Page Header |==========*/
-
-#button_create {
-    display: inline-block;
-    white-space: nowrap;
-    background-color: #48718E;
-    border-left: 3px solid #1e425c;
-    border-bottom: 3px solid #1e425c;
-    font-size: 1rem;
-    color: white;
-    border-radius: 100rem;
     padding: 0.5rem;
 }
 
-#button_create:active {
-    background-color: rgb(5, 57, 97);
+#main_page_body {
+    /* background-color: burlywood; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
 }
 
+.container_search {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    /* border-top: 3px solid #76C2E0; */
+    width: 80%;
+    padding-left: 3rem;
+    padding-right: 4rem;
+}
 
-/*=====(<base.html>)======================| Container around Notes of the Main Page |==========*/
+#form_search {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+#form_search .input_search {
+    vertical-align: middle;
+    box-shadow: inset 0px 0px 5px 1px #525252;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: -1rem;
+    margin-bottom: 0.5rem;
+}
+
+#form_search .input_search:focus {
+    outline: none;
+}
+
+#button_search {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #48718E;
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+    font-size: 1rem;
+    border-radius: 100rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#button_search:hover {
+    background-color: rgb(83, 142, 184);
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+}
+
+#button_search:active {
+    box-shadow: inset 0px 0px 10px 1px #242424;
+    background-color: #155c8f;
+    border-top: 5px solid #1e425c;
+    border-right: 5px solid #1e425c;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+    transform: scale(0.8);
+}
+
+#image_search {
+    width: 25px;
+}
 
 .note_container {
+    background-color: lightpink;
     height: 100%;
     width: 100%;
     margin-top: 0.5rem;
-    margin-bottom: -2.5rem;
+    margin-bottom: 0.5rem;
 }
-
-
-/*=====(<notes_list.html>)======================| Notes of the Right Side |==========*/
 
 .actual_note {
     display: flex;
@@ -155,8 +184,16 @@ body {
     height: 100%;
 }
 
+.actual_note:hover {
+    border-left: 7px solid #50b2f9;
+}
 
-/*=====(<notes_list.html>)======================| Text of Notes of the Right Side |==========*/
+
+/* .actual_note:active {
+    border-left: 7px solid #0b5a92;
+    transform: scale(0.98);
+    box-shadow: inset 0px 0px 20px 1px #8e8e8e;
+} */
 
 .note_text {
     white-space: nowrap;
@@ -169,9 +206,6 @@ body {
     font-weight: 800;
     margin-left: 1rem;
 }
-
-
-/*=====(<notes_list.html>)======================| Container around Buttons of the Right Side |==========*/
 
 .actual_note .buttons {
     white-space: nowrap;
@@ -186,35 +220,51 @@ body {
     align-self: center;
 }
 
-
-/*=====(<notes_list.html>)======================| Button of the Right Side |==========*/
+.note_icons {
+    width: 25px;
+}
 
 #button_edit {
     background-color: #48718E;
-    border-left: 3px solid #1e425c;
-    border-bottom: 3px solid #1e425c;
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
     color: white;
-    font-size: 1rem;
+    font-size: .78em;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    border-bottom-left-radius: 0rem;
+    border-bottom-left-radius: 0;
     border-bottom-right-radius: 1rem;
     padding: 0.5rem;
 }
 
-#button_edit:active {
-    background-color: rgb(5, 57, 97);
+#button_edit:hover {
+    background-color: rgb(83, 142, 184);
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
 }
 
-
-/*=====(<notes_list.html>)======================| Button of the Right Side |==========*/
+#button_edit:active {
+    box-shadow: inset 0px 0px 10px 1px #242424;
+    background-color: #155c8f;
+    border-top: 5px solid #1e425c;
+    border-right: 5px solid #1e425c;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+    transform: scale(0.8);
+}
 
 #button_delete {
     background-color: #f06969;
-    border-left: 3px solid #923c3c;
-    border-bottom: 3px solid #923c3c;
+    border-top: 5px solid #deb3b3;
+    border-right: 5px solid #deb3b3;
+    border-left: 5px solid #923c3c;
+    border-bottom: 5px solid #923c3c;
     color: white;
-    font-size: 1rem;
+    font-size: .8rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 0rem;
@@ -223,6 +273,199 @@ body {
     margin: 0;
 }
 
+#button_delete:hover {
+    background-color: #ee8b8b;
+    border-top: 5px solid #deb3b3;
+    border-right: 5px solid #deb3b3;
+    border-left: 5px solid #923c3c;
+    border-bottom: 5px solid #923c3c;
+}
+
 #button_delete:active {
-    background-color: #a23434;
+    box-shadow: inset 0px 0px 10px 1px #711111;
+    background-color: #9b4040;
+    border-top: 5px solid #711111;
+    border-right: 5px solid #711111;
+    border-left: 5px solid #711111;
+    border-bottom: 5px solid #711111;
+    transform: scale(0.8);
+}
+
+#divider {
+    border-top: 3px solid #4D97CC;
+    border-radius: 100rem;
+    width: 90%;
+    margin-top: 0;
+}
+
+#container_add {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    /* border-bottom: 3px solid #76C2E0; */
+    width: 80%;
+    padding-left: 3rem;
+    padding-right: 4rem;
+}
+
+#form_add {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+#container_add .input_add {
+    vertical-align: middle;
+    box-shadow: inset 0px 0px 5px 1px #525252;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: -1rem;
+    margin-bottom: 0.5rem;
+}
+
+#form_add .input_add:focus {
+    outline: none;
+}
+
+#button_add {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #48718E;
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+    border-radius: 100rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#button_add:hover {
+    background-color: rgb(83, 142, 184);
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+}
+
+#button_add:active {
+    box-shadow: inset 0px 0px 10px 1px #242424;
+    background-color: #155c8f;
+    border-top: 5px solid #1e425c;
+    border-right: 5px solid #1e425c;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+    transform: scale(0.8);
+}
+
+#image_add {
+    width: 25px;
+}
+
+
+/*=====================================| <notes_detail.html> |===========================*/
+
+#note_controls {
+    background-color: lemonchiffon;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    margin-top: 0rem;
+    margin-right: 1rem;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+}
+
+#note_controls img {
+    width: 20px;
+}
+
+#note_layout button {
+    background-color: #48718E;
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+    color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1rem;
+    padding: 0.3rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+#note_layout button:hover {
+    background-color: rgb(83, 142, 184);
+    border-top: 5px solid #90bdde;
+    border-right: 5px solid #90bdde;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+}
+
+#note_layout button:active {
+    box-shadow: inset 0px 0px 10px 1px #242424;
+    background-color: #155c8f;
+    border-top: 5px solid #1e425c;
+    border-right: 5px solid #1e425c;
+    border-left: 5px solid #1e425c;
+    border-bottom: 5px solid #1e425c;
+    transform: scale(0.9);
+}
+
+.divider_horizontal {
+    border-left: 2px solid #aeadad9a;
+    /* border-right: 2px solid #aeadad9a; */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#note_layout {
+    background-color: red;
+    white-space: nowrap;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#note_layout .title {
+    background-color: green;
+    border-top: 3px solid #4D97CC;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 0rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+#note_layout .description {
+    background-color: yellow;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-right: 3rem;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem;
 }

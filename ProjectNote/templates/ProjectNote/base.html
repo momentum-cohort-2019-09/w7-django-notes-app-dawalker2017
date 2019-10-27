@@ -1,5 +1,6 @@
 {% load staticfiles %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,20 +10,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Project:Note{% endblock%}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/ProjectNote.css' %}">
+    <script src="{% static 'js/notes_detail.js' %}" defer></script>
 </head>
 
 <body>
-    <div id="main_page_container">
+    <div id="everything_container">
         <div id="sidebar_container">
-            <img id="logo" src='static/assets/Logo.png'>
+            <img id="logo" src='{% static "assets/Logo.png" %}'>
             <div id="sidebar_text">
                 <div class="text">Home</div>
                 <div class="text">Notes</div>
             </div>
         </div>
-        <div id="main_page_body">
-            <div class="main_page_text">Notes:<button id="button_create">Create New Note +</button></div>
-            <div class="note_container" style="overflow:scroll">{% block content %} {% endblock %}</div>
+        <div id="main_page_container">
+            <div id="main_page_body">
+                <div id="divider"></div>
+                <div class="note_container" style="overflow:scroll">{% block content %} {% endblock %}</div>
+                <div id="divider"></div>
+            </div>
         </div>
     </div>
 </body>

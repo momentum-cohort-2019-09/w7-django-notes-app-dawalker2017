@@ -1,20 +1,41 @@
 {% extends "ProjectNote/base.html" %}
+{% load static %}
 
-<!--  -->
-{% block title %}Project:Note - {{ notes.title}}{% endblock %}
 
-<!--  -->
+{% block title %}Project:Note - {{ note.pk }} - {{ note.title }}{% endblock %}
+
 {% block content %}
+    <div id="note_layout">
+        <div id="note_controls">
+            <div class="divider_horizontal"></div>
+            <div class="note_control_button">
+                <button type="button" class="button_bulleted_list" onclick="descriptionMakeBulletedList()" title="Make Text a Bulleted List"><img class="image_bulleted_list" src="{% static 'assets/icon-list-bullet-white.png' %}">NW</button>
+            </div>
+            <div class="note_control_button">
+                <button type="button" class="button_numbered_list" onclick="descriptionMakeNumberedList()" title="Make Text a Numbered List"><img class="image_numbered_list" src="{% static 'assets/icon-list-number-white.png' %}">NW</button>
+            </div>
+            <div class="divider_horizontal"></div>
+            <div class="note_control_button">
+                <button type="button" class="button_leftalign" onclick="leftAlignDescription()" title="Left Align Text"><img class="image_leftalign" src="{% static 'assets/icon-align-left-white.png' %}"></button>
+            </div>
+            <div class="note_control_button">
+                <button type="button" class="button_centeralign" onclick="centerAlignDescription()" title="Center Align Text"><img class="image_centeralign" src="{% static 'assets/icon-align-center-white.png' %}"></button>
+            </div>
+            <div class="note_control_button">
+                <button type="button" class="button_rightalign" onclick="rightAlignDescription()" title="Right Align Text"><img class="image_rightalign" src="{% static 'assets/icon-align-right-white.png' %}"></button>
+            </div>
+            <div class="divider_horizontal"></div>
 
-<h3>{{ note.title }}</h3>
-
-{% if note.description %}
-
-<p>
-    {{ note.description }}
-</p>
-
-{% endif %}
-
-<!--  -->
+        </div>
+        <div class="title">
+            <h3>{{ note.title }}</h3>
+        </div>
+        <div class="description">
+            {% if note.description %}
+                <p id="description_paragraph">
+                    {{ note.description }}
+                </p>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
