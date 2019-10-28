@@ -205,7 +205,7 @@ body {
 }
 
 .note_container {
-    background-color: lightpink;
+    /* background-color: lightpink; */
     height: 100%;
     width: 100%;
     margin-top: 0.5rem;
@@ -424,7 +424,7 @@ body {
 /*=====================================| <notes_detail.html> |===========================*/
 
 #note_controls {
-    background-color: lemonchiffon;
+    /* background-color: lemonchiffon; */
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -481,7 +481,7 @@ body {
 }
 
 #note_layout {
-    background-color: red;
+    /* background-color: red; */
     white-space: nowrap;
     overflow-y: scroll;
     display: flex;
@@ -490,7 +490,7 @@ body {
 }
 
 #note_title {
-    background-color: green;
+    /* background-color: green; */
     /* border-top: 3px solid #4D97CC; */
     font-size: 1.3rem;
     font-weight: bold;
@@ -502,7 +502,7 @@ body {
 }
 
 #note_description_container {
-    background-color: lightslategray;
+    /* background-color: lightslategray; */
     width: 90%;
     align-self: center;
 }
@@ -516,13 +516,13 @@ body {
 }
 
 #note_list_container {
-    background-color: orange;
+    /* background-color: orange; */
     align-self: center;
     width: 80%;
 }
 
 #note_list_item {
-    background-color: yellow;
+    /* background-color: yellow; */
     list-style-position: inside;
     font-size: 1rem;
     margin-top: 0.5rem;
@@ -535,7 +535,7 @@ body {
 /*=====================================| <notes_create.html> |===========================*/
 
 .create_header {
-    background-color: red;
+    /* background-color: red; */
     text-align: center;
     font-size: 1.2rem;
     padding-top: 0.5rem;
@@ -545,7 +545,7 @@ body {
 }
 
 .container_create_form {
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
@@ -559,7 +559,7 @@ body {
 }
 
 .create_form {
-    background-color: orange;
+    /* background-color: orange; */
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
@@ -573,7 +573,7 @@ body {
 }
 
 .container_button_create_form {
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 6rem;
     padding-top: 0.2rem;
     padding-left: 0.5rem;
@@ -600,22 +600,22 @@ body {
 /* |=====| <notes_detail.html> |=====| */
 
 .container_add_item {
-    background-color: blue;
+    /* background-color: blue; */
     padding: 1rem;
 }
 
 .header_add_item {
-    background-color: purple;
+    /* background-color: purple; */
     padding: 1rem;
 }
 
 .form_add_item {
-    background-color: hotpink;
+    /* background-color: hotpink; */
     padding: 1rem;
 }
 
 .container_input_add_item {
-    background-color: yellow;
+    /* background-color: yellow; */
     padding: 1rem;
 }
 
@@ -627,7 +627,7 @@ body {
 }
 
 .container_button_add_item {
-    background-color: burlywood;
+    /* background-color: burlywood; */
     width: 6rem;
     padding-top: 0.5rem;
     padding-left: 1rem;
