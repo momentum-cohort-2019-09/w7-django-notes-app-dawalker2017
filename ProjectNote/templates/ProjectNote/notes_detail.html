@@ -6,27 +6,6 @@
 
 {% block content %}
     <div id="note_layout">
-        {% comment %} <div id="note_controls">
-            <div class="divider_horizontal"></div>
-            <div class="note_control_button">
-                <button type="button" class="button_bulleted_list" onclick="makeItemsBulletedList()" title="Make Text a Bulleted List"><img class="image_bulleted_list" src="{% static 'assets/icon-list-bullet-white.png' %}">NW</button>
-            </div>
-            <div class="note_control_button">
-                <button type="button" class="button_numbered_list" onclick="makeItemsNumberedList()" title="Make Text a Numbered List"><img class="image_numbered_list" src="{% static 'assets/icon-list-number-white.png' %}">NW</button>
-            </div>
-            <div class="divider_horizontal"></div>
-            <div class="note_control_button">
-                <button type="button" class="button_leftalign" onclick="leftAlignItems()" title="Left Align Text"><img class="image_leftalign" src="{% static 'assets/icon-align-left-white.png' %}"></button>
-            </div>
-            <div class="note_control_button">
-                <button type="button" class="button_centeralign" onclick="centerAlignItems()" title="Center Align Text"><img class="image_centeralign" src="{% static 'assets/icon-align-center-white.png' %}"></button>
-            </div>
-            <div class="note_control_button">
-                <button type="button" class="button_rightalign" onclick="rightAlignItems()" title="Right Align Text"><img class="image_rightalign" src="{% static 'assets/icon-align-right-white.png' %}"></button>
-            </div>
-            <div class="divider_horizontal"></div>
-
-        </div> {% endcomment %}
         <div id="note_title">
             <h3>{{ note.title }}</h3>
         </div>
@@ -39,12 +18,29 @@
         </div>
         <div id="note_list_container">
             <ol id="note_list">
-                {% for item in items.all %}
+                {% for item in note.items.all %}
                     <li id="note_list_item">
                         {{ item.body }}
                     </li>
                 {% endfor %}
             </ol>
+        </div>
+    </div>
+    <div class="container_add_item">
+        <div class="header_add_item">
+            <h3>Add New Item</h3>
+        </div>
+        <div class="form_add_item">
+            <form action="" method="POST">
+            {% csrf_token %}
+                <div class="container_input_add_item">
+                    {% comment %} <input class="input_add_item" type="text" placeholder="Type Item Here"> {% endcomment %}
+                    {{ item_form.as_p }}
+                </div>
+                <div class="container_button_add_item">
+                    <button class="button_add_item" type="submit">Add Item</button>
+                </div>
+            </form>
         </div>
     </div>
 {% endblock %}

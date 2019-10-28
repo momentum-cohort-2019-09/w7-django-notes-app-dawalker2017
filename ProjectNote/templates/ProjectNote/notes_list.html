@@ -8,7 +8,7 @@
         <div class="note_wrapper">
             <div class="actual_note">
                 <div><a class="note_text" href='{% url "notes_detail" pk=note.id %}'>{{ note.title }}</a></div>
-                <div class="buttons"><button id="button_edit"><img class="note_icons" src="static/assets/icon-edit-white.png"></button> <button id="button_delete"><img class="note_icons" src="static/assets/icon-delete-white.png"></button></div>
+                <div class="buttons"><a href="{% url 'notes_edit' pk=note.pk %}"><button id="button_edit"><img class="note_icons" src="static/assets/icon-edit-white.png"></button></a> <button id="button_delete"><img class="note_icons" src="static/assets/icon-delete-white.png"></button></div>
             </div>
         </div>
     </li>

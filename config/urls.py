@@ -20,6 +20,7 @@ from ProjectNote import views
 urlpatterns = [
     path('', views.notes_list, name="notes_list"),
     path('notes/<int:pk>/', views.notes_detail, name="notes_detail"),
+    path('notes/<int:pk>/edit/', views.notes_edit, name="notes_edit"),
     path('notes/new/', views.notes_create, name="notes_create"),
     path('admin/', admin.site.urls),
 ]

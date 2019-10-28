@@ -1,0 +1,27 @@
+{% extends "ProjectNote/base.html" %}
+
+{% block content %}
+    <div class="create_header">
+        <h2>Edit "{{ note.title }}"</h2>
+    </div>
+    
+    <div class="container_create_form">
+        <form action="" method="POST">
+        {% csrf_token %}
+            {% for field in form %}
+                <div class="create_form">
+                    {{ field.label_tag }}
+                    {% for error in field.errors %}
+                    <div class="field_errors">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <div class="container_button_create_form">
+                <button class="button_create_form" typ="submit">Save</button>
+            </div>
+        </form>
+    </div>
+{% endblock%}

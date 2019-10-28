@@ -28,9 +28,8 @@ class NoteItem(models.Model):
 
     body = models.CharField(
         max_length=255,
-        help_text="Max Characters: 255",
     )
-    checklist = models.ForeignKey(
+    note = models.ForeignKey(
         to=Note, on_delete=models.CASCADE, related_name='items')
 
     order = models.PositiveIntegerField(default=0)

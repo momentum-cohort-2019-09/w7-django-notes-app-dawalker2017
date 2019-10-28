@@ -592,3 +592,55 @@ body {
     padding-right: 0.5rem;
     padding-bottom: 0.2rem;
 }
+
+
+/* !!!!! TO STYLE LATER !!!!! */
+
+
+/* |=====| <notes_detail.html> |=====| */
+
+.container_add_item {
+    background-color: blue;
+    padding: 1rem;
+}
+
+.header_add_item {
+    background-color: purple;
+    padding: 1rem;
+}
+
+.form_add_item {
+    background-color: hotpink;
+    padding: 1rem;
+}
+
+.container_input_add_item {
+    background-color: yellow;
+    padding: 1rem;
+}
+
+.input_add_item {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.container_button_add_item {
+    background-color: burlywood;
+    width: 6rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.button_add_item {
+    padding-top: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.2rem;
+}
+
+
+/* |=================================| */
